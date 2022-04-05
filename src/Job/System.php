@@ -2,21 +2,12 @@
 
 namespace Objectsystems\Phalcon\Cron\Job;
 
-use Objectsystems\Phalcon\Cron\Job;
+use Objectsystems\Cron\Job;
 
 class System extends Job
 {
-    /**
-     * @var string
-     */
-    protected $command;
-
-    /**
-     * @var string
-     */
-    protected $output;
-
-
+    protected string $command;
+    protected string $output;
 
     public function __construct(string $expression, string $command, string $output = null)
     {
@@ -26,22 +17,15 @@ class System extends Job
         $this->output  = $output;
     }
 
-
-
     public function getCommand() : string
     {
         return $this->command;
     }
 
-    /**
-     * @return string|null
-     */
-    public function getOutput()
+    public function getOutput(): string
     {
         return $this->output;
     }
-
-
 
     private function buildCommand() : string
     {
@@ -55,12 +39,7 @@ class System extends Job
         return $command;
     }
 
-
-
-    /**
-     * @return string|null
-     */
-    public function runInForeground()
+    public function runInForeground(): string
     {
         return shell_exec(
             $this->buildCommand()

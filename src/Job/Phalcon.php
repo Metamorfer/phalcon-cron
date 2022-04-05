@@ -8,56 +8,24 @@ use Objectsystems\Phalcon\Cron\Job;
 
 class Phalcon extends Job
 {
-    /**
-     * @var array|null
-     */
-    protected $body;
+    protected array $body;
 
-
-
-    /**
-     * @param array|null $body
-     *
-     * @throws Exception
-     */
-    public function __construct(string $expression, $body = null)
+    public function __construct(DiInterface $di, string $expression, $body = [])
     {
-        $di = $this->getDI();
-
-        if (!($di instanceof DiInterface)) {
-            throw new Exception(
-                "A dependency injection object is required to access internal services"
-            );
-        }
-
-
-
+        $this->di = $di;
         parent::__construct($expression);
-
-
-
         $this->body = $body;
     }
 
-
-
-    /**
-     * @return array|null
-     */
-    public function getBody()
+    public function getBody(): array
     {
         return $this->body;
     }
 
-
-
     public function runInForeground() : string
     {
         $di = $this->getDI();
-
         $console = $di->get("console");
-
-
 
         ob_start();
 
@@ -68,8 +36,6 @@ class Phalcon extends Job
         $contents = ob_get_contents();
 
         ob_end_clean();
-
-
 
         return $contents;
     }

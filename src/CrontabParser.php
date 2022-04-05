@@ -6,16 +6,8 @@ use Objectsystems\Phalcon\Cron\Job\System as SystemJob;
 
 class CrontabParser
 {
-    /**
-     * @var string
-     */
-    protected $filename;
+    protected string $filename;
 
-
-
-    /**
-     * @throws Exception
-     */
     public function __construct(string $filename)
     {
         if (!file_exists($filename)) {
@@ -27,14 +19,10 @@ class CrontabParser
         $this->filename = $filename;
     }
 
-
-
     public function getJobs() : array
     {
         $contents = file_get_contents($this->filename);
-
         $lines = explode(PHP_EOL, $contents);
-
         $jobs = [];
 
         foreach ($lines as $line) {

@@ -9,18 +9,11 @@ namespace Objectsystems\Phalcon\Cron;
  */
 class Process
 {
-    /**
-     * @var int
-     */
-    protected $processID;
-
-
+    protected int $processID;
 
     public function __construct(int $processID)
     {
         $this->processID = $processID;
-
-
 
         register_shutdown_function(
             [
@@ -30,14 +23,10 @@ class Process
         );
     }
 
-
-
     public function getProcessID() : int
     {
         return $this->processID;
     }
-
-
 
     /**
      * Determine if this process is currently running. Defunct/zombie processes
@@ -57,8 +46,6 @@ class Process
         return ($result !== "");
     }
 
-
-
     /**
      * Wait for the process to finish.
      */
@@ -69,8 +56,6 @@ class Process
             $status
         );
     }
-
-
 
     /**
      * Terminate the process.

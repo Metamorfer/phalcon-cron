@@ -3,15 +3,14 @@
 namespace Objectsystems\Phalcon\Cron;
 
 use DateTime;
+use Objectsystems\Cron\Manager;
 
-class Manager extends \Sid\Cron\Manager
+class Manager extends Manager
 {
     /**
      * For background jobs.
      */
     protected $processes = [];
-
-
 
     public function addCrontab(string $filename)
     {
@@ -23,8 +22,6 @@ class Manager extends \Sid\Cron\Manager
             $this->add($job);
         }
     }
-
-
 
     /**
      * Run all due jobs in the foreground.
@@ -47,6 +44,10 @@ class Manager extends \Sid\Cron\Manager
      */
     public function runInBackground(DateTime $now = null) : array
     {
+        if (empty($now)) {
+            $now = new DateTime();
+        }
+
         $jobs = $this->getDueJobs($now);
 
         foreach ($jobs as $job) {
@@ -55,8 +56,6 @@ class Manager extends \Sid\Cron\Manager
 
         return $this->processes;
     }
-
-
 
     /**
      * Wait for all jobs running in the background to finish.
@@ -67,8 +66,6 @@ class Manager extends \Sid\Cron\Manager
             $process->wait();
         }
     }
-
-
 
     /**
      * Terminate all jobs running in the background.

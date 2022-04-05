@@ -10,8 +10,6 @@ class Callback extends Job
      * @var callable
      */
     protected $callback;
-    
-    
 
     public function __construct(string $expression, callable $callback)
     {
@@ -19,16 +17,12 @@ class Callback extends Job
         
         $this->callback = $callback;
     }
-    
-    
-    
+
     public function getCallback() : callable
     {
         return $this->callback;
     }
-    
-    
-    
+
     /**
      * @return mixed
      */

@@ -2,32 +2,26 @@
 
 namespace Objectsystems\Phalcon\Cron;
 
-use Cron\CronExpression;
 use DateTime;
+use Cron\CronExpression;
 use Phalcon\Di\Injectable;
+use Objectsystems\Cron\Process;
+use Objectsystems\Cron\Exception;
+use Objectsystems\Cron\JobInterface;
 
-abstract class Job extends Injectable implements \Sid\Cron\JobInterface
+abstract class Job extends Injectable implements JobInterface
 {
-    /**
-     * @var string
-     */
-    protected $expression;
-
-
+    protected string $expression;
 
     public function __construct(string $expression)
     {
         $this->expression = $expression;
     }
 
-
-
     public function getExpression() : string
     {
         return $this->expression;
     }
-
-
 
     public function isDue(DateTime $datetime = null) : bool
     {
@@ -37,8 +31,6 @@ abstract class Job extends Injectable implements \Sid\Cron\JobInterface
 
         return $cronExpression->isDue($datetime);
     }
-
-
 
     /**
      * @return mixed
