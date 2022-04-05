@@ -1,0 +1,39 @@
+{
+    "name":        "objectsystems/phalcon-cron",
+    "description": "Cron component for Phalcon. Forked for PHP 8.0 needs",
+    "type":        "library",
+    "license":     "MIT",
+
+    "authors": [
+        {
+            "name":     "Sid Roberts",
+            "email":    "sid@sidroberts.co.uk",
+            "homepage": "https://sidroberts.co.uk",
+            "role":     "Developer"
+        }
+    ],
+
+
+    "require": {
+        "php": "8.0.*",
+
+        "ext-phalcon": "~5.0",
+
+        "objectsystems/cron": "~1.0"
+    },
+
+    "require-dev": {
+        "codeception/codeception": "*",
+        "codeception/module-asserts": "*",
+
+        "squizlabs/php_codesniffer": "*"
+    },
+
+
+
+    "autoload": {
+        "psr-4": {
+            "Sid\\Phalcon\\Cron\\": "src/"
+        }
+    }
+}
