@@ -3,9 +3,9 @@
 namespace Objectsystems\Phalcon\Cron;
 
 use DateTime;
-use Objectsystems\Cron\Manager;
+use Objectsystems\Cron\Manager as CronManager;
 
-class Manager extends Manager
+class Manager extends CronManager
 {
     /**
      * For background jobs.
