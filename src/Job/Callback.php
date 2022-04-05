@@ -1,8 +1,8 @@
 <?php
 
-namespace PhalconCron\Job;
+namespace Osi\PhalconCron\Job;
 
-use PhalconCron\Job;
+use Osi\PhalconCron\Job;
 
 class Callback extends Job
 {

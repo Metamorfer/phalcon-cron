@@ -1,6 +1,6 @@
 <?php
 
-namespace PhalconCron;
+namespace Osi\PhalconCron;
 
 class Exception extends \Exception
 {

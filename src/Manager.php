@@ -1,9 +1,9 @@
 <?php
 
-namespace PhalconCron;
+namespace Osi\PhalconCron;
 
 use DateTime;
-use Cron\Manager as CronManager;
+use Osi\Cron\Manager as CronManager;
 
 class Manager extends CronManager
 {

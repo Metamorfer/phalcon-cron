@@ -1,8 +1,8 @@
 <?php
 
-namespace PhalconCron;
+namespace Osi\PhalconCron;
 
-use PhalconCron\Job\System as SystemJob;
+use Osi\PhalconCron\Job\System as SystemJob;
 
 class CrontabParser
 {

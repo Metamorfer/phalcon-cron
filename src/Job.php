@@ -1,13 +1,13 @@
 <?php
 
-namespace PhalconCron;
+namespace Osi\PhalconCron;
 
 use DateTime;
 use Cron\CronExpression;
 use Phalcon\Di\Injectable;
-use PhalconCron\Process;
-use PhalconCron\Exception;
-use Cron\JobInterface;
+use Osi\PhalconCron\Process;
+use Osi\PhalconCron\Exception;
+use Osi\Cron\JobInterface;
 
 abstract class Job extends Injectable implements JobInterface
 {

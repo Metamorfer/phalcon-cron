@@ -1,8 +1,8 @@
 <?php
 
-namespace PhalconCron\Job;
+namespace Osi\PhalconCron\Job;
 
-use Cron\Job;
+use Osi\Cron\Job;
 
 class System extends Job
 {

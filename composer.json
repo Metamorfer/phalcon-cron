@@ -33,7 +33,7 @@
 
     "autoload": {
         "psr-4": {
-            "Objectsystems\\PhalconCron\\": "src/"
+            "Osi\\PhalconCron\\": "src/"
         }
     }
 }
