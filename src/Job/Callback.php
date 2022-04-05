@@ -1,6 +1,6 @@
 <?php
 
-namespace Objectsystems\Phalcon\Cron\Job;
+namespace Phalcon\Cron\Job;
 
 use Objectsystems\Phalcon\Cron\Job;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Objectsystems\Phalcon\Cron;
+namespace Phalcon\Cron;
 
 use DateTime;
 use Objectsystems\Cron\Manager as CronManager;
