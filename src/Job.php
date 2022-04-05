@@ -5,9 +5,9 @@ namespace PhalconCron;
 use DateTime;
 use Cron\CronExpression;
 use Phalcon\Di\Injectable;
-use Objectsystems\Cron\Process;
-use Objectsystems\Cron\Exception;
-use Objectsystems\Cron\JobInterface;
+use PhalconCron\Process;
+use PhalconCron\Exception;
+use Cron\JobInterface;
 
 abstract class Job extends Injectable implements JobInterface
 {

@@ -2,7 +2,7 @@
 
 namespace PhalconCron\Job;
 
-use Objectsystems\Cron\Job;
+use Cron\Job;
 
 class System extends Job
 {
