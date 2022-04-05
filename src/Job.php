@@ -1,6 +1,6 @@
 <?php
 
-namespace Phalcon\Cron;
+namespace PhalconCron;
 
 use DateTime;
 use Cron\CronExpression;

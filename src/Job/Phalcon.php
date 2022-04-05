@@ -1,10 +1,10 @@
 <?php
 
-namespace Phalcon\Cron\Job;
+namespace PhalconCron\Job;
 
 use Phalcon\Di\DiInterface;
-use Objectsystems\Phalcon\Cron\Exception;
-use Objectsystems\Phalcon\Cron\Job;
+use PhalconCron\Exception;
+use PhalconCron\Job;
 
 class Phalcon extends Job
 {

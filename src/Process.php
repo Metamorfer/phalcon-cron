@@ -1,6 +1,6 @@
 <?php
 
-namespace Phalcon\Cron;
+namespace PhalconCron;
 
 /**
  * As this class uses PNCTL/POSIX functions and applies a shutdown handler that

@@ -1,8 +1,8 @@
 <?php
 
-namespace Phalcon\Cron\Job;
+namespace PhalconCron\Job;
 
-use Objectsystems\Phalcon\Cron\Job;
+use PhalconCron\Job;
 
 class Callback extends Job
 {

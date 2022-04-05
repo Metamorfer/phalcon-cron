@@ -1,6 +1,6 @@
 <?php
 
-namespace Phalcon\Cron;
+namespace PhalconCron;
 
 class Exception extends \Exception
 {
