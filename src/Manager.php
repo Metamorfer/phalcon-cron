@@ -28,6 +28,10 @@ class Manager extends CronManager
      */
     public function runInForeground(DateTime $now = null) : array
     {
+        if (empty($now)) {
+            $now = new DateTime();
+        }
+
         $jobs = $this->getDueJobs($now);
 
         $outputs = [];
