@@ -17,9 +17,9 @@
     "require": {
         "php": "^8.2",
 
-        "ext-phalcon": "^5.*",
+        "ext-phalcon": "^5.0",
 
-        "objectsystems/cron": "^1.*"
+        "objectsystems/cron": "^1.2"
     },
 
     "require-dev": {
